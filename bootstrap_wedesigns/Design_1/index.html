@@ -6,71 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <style type="text/css">
-        :root{
-            --div-height : 85vh;
-            --bg-size: 100% 100%
-        }
-
-        .center_div .top_div{
-            height: calc(var(--div-height) - 40vh);
-        }
-        .center_div .right_top_div{
-            height: calc(var(--div-height) - 50vh);
-        }
-        .center_div .bottom_first_div{
-            height: calc(var(--div-height) - 30vh);
-        }
-        .center_div .bottom_second_div{
-            height: calc(var(--div-height) - 30vh);
-        }
-
-    </style>
-    <title>Hello, world!</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>All Anime Materials</title>
   </head>
-  <body>
-    <div class="container-fluid">
-        <div class="center_div">
-        <div class="row">
-            <div class="col-lg-6 col-12 bg-info">
-                <div class="row">
-                    <div class="col-12 top_div bg-warning">
-                        <p>a simple demo1</p>
-                    </div>
-                    <div class="col-12 top_div bg-secondary">
-                        <p>a simple demo2</p>
-                    </div>
-
-                </div>    
-            </div>
-            
-            <div class="col-lg-6 col-12 bg-info">
-                <div class="row">
-                    <div class="col-12 bg-primary right_top_div">
-                        <p>a simple demo 3</p>
-                    </div>
-                    
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-12 bg-danger bottom_first_div">
-                        <p>a simple demo 4</p>
-                    </div>
-                    <div class="col-md-6 col-12 bg-success bottom_second_div">
-                        <p>a simple demo 5</p>
-                    </div>
-                </div>
-            </div>
-
+  <body class="bg-color">
+    <div id="slider" class="caruosel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://wallpaperaccess.com/full/45911.jpg" class="d-block w-100" alt="..."/>
+              </div>
+              <div class="carousel-item ">
+                <img src="https://wallpaper-mania.com/wp-content/uploads/2018/09/High_resolution_wallpaper_background_ID_77700066892-692x376.jpg" class="d-block w-100" alt="..."/>
+              </div>
+              <div class="carousel-item ">
+                <img src="https://i.pinimg.com/originals/35/a5/8c/35a58c86172344218f1210ce1df5a1fa.jpg" class="d-block w-100" alt="..."/>
+              </div>
+              <div class="carousel-item ">
+                <img src="https://wallpaperaccess.com/full/45912.jpg" class="d-block w-100" alt="..."/>
+              </div>
         </div>
-        </div> 
+        <button class="carousel-control-prev" type="button" 
+        data-bs-target="#slider" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" 
+        data-bs-target="#slider" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
     </div>
-
     
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ" crossorigin="anonymous"></script>    
+</body>
 </html>
