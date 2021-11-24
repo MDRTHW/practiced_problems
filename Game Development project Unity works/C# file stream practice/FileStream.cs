@@ -5,7 +5,7 @@ namespace HelloWorld
     class FileStream {         
         static void Main()
         {
-            string writeText="This is a file";
+            string writeText="This is a new file ";
             File.WriteAllText("file1.txt",writeText);
 
             string readText=File.ReadAllText("file1.txt");
