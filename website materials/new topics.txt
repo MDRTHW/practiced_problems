@@ -1,0 +1,4 @@
+1. windows ip change
+2. windows mac change
+3. what is 1mbps speed storage calculation byte, bandwith bit
+4. compiler update
