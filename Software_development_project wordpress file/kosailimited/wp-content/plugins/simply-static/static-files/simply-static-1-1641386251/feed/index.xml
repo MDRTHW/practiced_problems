@@ -1,0 +1,947 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0"
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:wfw="http://wellformedweb.org/CommentAPI/"
+	xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:atom="http://www.w3.org/2005/Atom"
+	xmlns:sy="http://purl.org/rss/1.0/modules/syndication/"
+	xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+	>
+
+<channel>
+	<title>Kosai Limited</title>
+	<atom:link href="./index.html" rel="self" type="application/rss+xml" />
+	<link>./../index.html</link>
+	<description>Just read a Blog</description>
+	<lastBuildDate>Wed, 05 Jan 2022 11:15:12 +0000</lastBuildDate>
+	<language>en-US</language>
+	<sy:updatePeriod>
+	hourly	</sy:updatePeriod>
+	<sy:updateFrequency>
+	1	</sy:updateFrequency>
+	<generator>https://wordpress.org/?v=5.8.2</generator>
+
+<image>
+	<url>./../wp-content/uploads/2022/01/cropped-cropped-sample-5-1-32x32.jpg</url>
+	<title>Kosai Limited</title>
+	<link>./../index.html</link>
+	<width>32</width>
+	<height>32</height>
+</image> 
+	<item>
+		<title>Binary Search</title>
+		<link>./../2022/01/05/binary-search/index.html</link>
+					<comments>./../2022/01/05/binary-search/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Wed, 05 Jan 2022 07:45:44 +0000</pubDate>
+				<category><![CDATA[Searching algorithms]]></category>
+		<guid isPermaLink="false">./../index.html?p=135</guid>
+
+					<description><![CDATA[What is Binary search? Binary search is a algorithm to find a value in a sorted array . It uses the divide and conquer method to search a particular element. It divides the array based on the element to find and cuts half , then again does the same until the required value is found....]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">What is Binary search?</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Binary search is a algorithm to find a value in a sorted array . It uses the divide and conquer method to search a particular element. It divides the array based on the element to find and cuts half , then again does the same until the required value is found. But the first thing we need here is the sorted array where we will use the binary search.</p>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="588" height="351" src="./../wp-content/uploads/2022/01/binary-search.png" alt="" class="wp-image-141" srcset="./../wp-content/uploads/2022/01/binary-search.png 588w, ./../wp-content/uploads/2022/01/binary-search-300x180.png 300w" sizes="(max-width: 588px) 100vw, 588px" /><figcaption>Binary search</figcaption></figure>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Algorithm</h3>
+
+
+
+<div class="wp-block-group has-cyan-bluish-gray-background-color has-background"><div class="wp-block-group__inner-container">
+<ol type="1"><li>UPPERBOUND:= N</li></ol>
+
+
+
+<p>LOWERBOUND:=1While X is not found</p>
+
+
+
+<p>If UPERBOUND&lt;LOWERBOUND</p>
+
+
+
+<p>Exit &nbsp;(X not found ).</p>
+
+
+
+<p>[end of if]</p>
+
+
+
+<p>MIDPOINT:=LOWERBOUND+( UPPERBOUND-LOWERBOUND) /2</p>
+
+
+
+<p>If LIST[MIDPOINT] &lt; X</p>
+
+
+
+<p>LOWERBOUND := MIDPOINT+1</p>
+
+
+
+<p>If LIST[MIDPOINT] &gt; X</p>
+
+
+
+<p>UPPERBOUND := MIDPOINT – 1</p>
+
+
+
+<p>If LIST[MIDPOINT] = X</p>
+
+
+
+<p>Exit (X found at location MIDPOINT).</p>
+
+
+
+<p>[end of while loop]</p>
+
+
+
+<p>End of program.</p>
+</div></div>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Sample code</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<pre class="wp-block-code"><code>int binarySearch(int list&#91;], int x) 
+{
+	lo=1;
+   up=n; 
+
+    while (lo &lt;= up) { 
+        int mid = lo + (up - lo) / 2; 
+  
+         
+        if (list&#91;mid] == x) 
+            return mid; 
+  
+      
+        if (list&#91;mid] &lt; x) 
+            lo = mid + 1; 
+  
+      
+        else
+            up = mid - 1; 
+    } 
+  
+    
+    return -1; 
+} 
+</code></pre>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Complexity</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Best case complexity: O ( 1 )</li><li>Average case complexity: O ( log n )</li><li>Worst case complexity: O ( log n )</li></ul>
+
+
+
+<div style="height:35px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-pale-cyan-blue-background-color has-text-color has-background">Advantages and Disadvantages</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ol type="1"><li>This algorithm is very fast than any other searching algorithm.</li><li>The only disadvantage is the array must be sorted otherwise binary search can’t be used.</li><li>For large lists of data, it works significantly better than linear search.</li><li>It employs recursive approach which requires more stack space.</li></ol>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/05/binary-search/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Queue</title>
+		<link>./../2022/01/04/queue-2/index.html</link>
+					<comments>./../2022/01/04/queue-2/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 12:01:05 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<guid isPermaLink="false">./../index.html?p=124</guid>
+
+					<description><![CDATA[What is queue? Queue is a linear set of data or elements where deletions can take place only in front of the list&#160;&#160; and insertion can take place only back of the list. It is also called LILO ( Last in last out ) or FIFO ( First in first out ). Example Any kinds...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">What is queue?</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Queue is a linear set of data or elements where deletions can take place only in front of the list&nbsp;&nbsp; and insertion can take place only back of the list. It is also called LILO ( Last in last out ) or FIFO ( First in first out ).</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Example</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Any kinds of line for ticket counter uses the queue logic. The first one to appear in line the first one to get the service.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="376" height="284" src="./../wp-content/uploads/2022/01/queue.png" alt="" class="wp-image-126" srcset="./../wp-content/uploads/2022/01/queue.png 376w, ./../wp-content/uploads/2022/01/queue-300x227.png 300w" sizes="(max-width: 376px) 100vw, 376px" /></figure>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Array Representation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="225" height="451" src="./../wp-content/uploads/2022/01/queue-arr.png" alt="" class="wp-image-125" srcset="./../wp-content/uploads/2022/01/queue-arr.png 225w, ./../wp-content/uploads/2022/01/queue-arr-150x300.png 150w" sizes="(max-width: 225px) 100vw, 225px" /><figcaption>Array representation of Queue</figcaption></figure>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Linked Representation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="482" height="137" src="./../wp-content/uploads/2022/01/queue-link.png" alt="" class="wp-image-127" srcset="./../wp-content/uploads/2022/01/queue-link.png 482w, ./../wp-content/uploads/2022/01/queue-link-300x85.png 300w" sizes="(max-width: 482px) 100vw, 482px" /><figcaption>Linked representation of Queue</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="545" height="115" src="./../wp-content/uploads/2022/01/queue-push.png" alt="" class="wp-image-128" srcset="./../wp-content/uploads/2022/01/queue-push.png 545w, ./../wp-content/uploads/2022/01/queue-push-300x63.png 300w" sizes="(max-width: 545px) 100vw, 545px" /><figcaption>Push operation</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="394" height="113" src="./../wp-content/uploads/2022/01/queue-pop.png" alt="" class="wp-image-129" srcset="./../wp-content/uploads/2022/01/queue-pop.png 394w, ./../wp-content/uploads/2022/01/queue-pop-300x86.png 300w" sizes="(max-width: 394px) 100vw, 394px" /><figcaption>Pop operation</figcaption></figure>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Classification of queue</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Circular queue</li><li>Input restricted queue</li><li>Output restricted queue</li><li>Double ended queue</li><li>Priority queue</li></ul>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/queue-2/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Depth First Search (DFS)</title>
+		<link>./../2022/01/04/depth-first-search-dfs/index.html</link>
+					<comments>./../2022/01/04/depth-first-search-dfs/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 11:57:52 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../index.html?p=130</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/depth-first-search-dfs/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Stack</title>
+		<link>./../2022/01/04/stack-2/index.html</link>
+					<comments>./../2022/01/04/stack-2/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 11:44:03 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<guid isPermaLink="false">./../index.html?p=116</guid>
+
+					<description><![CDATA[What is stack? Stack is a linear&#160; set or collection of data where data are inserted , deleted or operation are held according to LIFO( last in first out) or FILO( First in last out) rule. It is a abstract data type&#160;&#160; commonly used in many programming language. In stack terminology the insertion is called...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">What is stack?</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Stack is a linear&nbsp; set or collection of data where data are inserted , deleted or operation are held according to LIFO( last in first out) or FILO( First in last out) rule. It is a abstract data type&nbsp;&nbsp; commonly used in many programming language. In stack terminology the insertion is called push and the deletion of data is called pop.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background"><strong>Example</strong></h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Suppose you are putting coins (1,5,10) one after another. You put 1 , 5 then 10. Now this current situation of the coins are called stack. The interesting part comes when you want to remove the 5 coin . What will you do?</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="658" height="369" src="./../wp-content/uploads/2022/01/stack.png" alt="" class="wp-image-117" srcset="./../wp-content/uploads/2022/01/stack.png 658w, ./../wp-content/uploads/2022/01/stack-300x168.png 300w" sizes="(max-width: 658px) 100vw, 658px" /><figcaption>simulation</figcaption></figure>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Array representation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="629" height="159" src="./../wp-content/uploads/2022/01/stack-arr-1.png" alt="" class="wp-image-118" srcset="./../wp-content/uploads/2022/01/stack-arr-1.png 629w, ./../wp-content/uploads/2022/01/stack-arr-1-300x76.png 300w" sizes="(max-width: 629px) 100vw, 629px" /></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="689" height="324" src="./../wp-content/uploads/2022/01/stack-arr-2.png" alt="" class="wp-image-119" srcset="./../wp-content/uploads/2022/01/stack-arr-2.png 689w, ./../wp-content/uploads/2022/01/stack-arr-2-300x141.png 300w" sizes="(max-width: 689px) 100vw, 689px" /></figure>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-black-color has-vivid-green-cyan-background-color has-text-color has-background">Linked representation</h3>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="505" height="112" src="./../wp-content/uploads/2022/01/stack-link-1.png" alt="" class="wp-image-120" srcset="./../wp-content/uploads/2022/01/stack-link-1.png 505w, ./../wp-content/uploads/2022/01/stack-link-1-300x67.png 300w" sizes="(max-width: 505px) 100vw, 505px" /><figcaption>Linked representation of Stack</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="599" height="86" src="./../wp-content/uploads/2022/01/stack-push.png" alt="" class="wp-image-121" srcset="./../wp-content/uploads/2022/01/stack-push.png 599w, ./../wp-content/uploads/2022/01/stack-push-300x43.png 300w" sizes="(max-width: 599px) 100vw, 599px" /><figcaption>Push operation in Linked Stack</figcaption></figure>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="513" height="106" src="./../wp-content/uploads/2022/01/stack-pop.png" alt="" class="wp-image-122" srcset="./../wp-content/uploads/2022/01/stack-pop.png 513w, ./../wp-content/uploads/2022/01/stack-pop-300x62.png 300w" sizes="(max-width: 513px) 100vw, 513px" /><figcaption>Pop operation in Linked Stack</figcaption></figure>
+
+
+
+<p>As Stack is an <a rel="noreferrer noopener" href="./../2022/01/04/abstract-data-types-adt/index.html" target="_blank">ADT </a>so it can be easily used in code. No need to implement and use it. But for learning purpose what happens in to this <a rel="noreferrer noopener" href="./../2022/01/04/abstract-data-types-adt/index.html" target="_blank">ADT </a>we need to implement it. Both <a rel="noreferrer noopener" href="./../2022/01/04/linked-list/index.html" target="_blank">linked list</a> or array representation can be used. Using array representation helps to know the background operation more efficiently.</p>
+
+
+
+<p></p>
+
+
+
+<p>In <a href="./../2022/01/04/depth-first-search-dfs/index.html" target="_blank" rel="noreferrer noopener">Depth First search (DFS)</a> stack is used.</p>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/stack-2/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Selection sort</title>
+		<link>./../2022/01/04/selection-sort/index.html</link>
+					<comments>./../2022/01/04/selection-sort/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 11:25:40 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[Sorting]]></category>
+		<guid isPermaLink="false">./../index.html?p=113</guid>
+
+					<description><![CDATA[What is Selection Sort? There are numerous sorting methods and selection sort is one of them .Which uses two part: one is sorted and another is unsorted.&#160; It &#160;repeatedly finds the minimum element&#160;from unsorted part and putting it at&#160; the sorted part. Its same as insertion sort but difference is here the sorted part is...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">What is Selection Sort?</h3>
+
+
+
+<div style="height:13px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>There are numerous sorting methods and selection sort is one of them .Which uses two part: one is sorted and another is unsorted.&nbsp; It &nbsp;repeatedly finds the minimum element&nbsp;from unsorted part and putting it at&nbsp; the sorted part. Its same as insertion sort but difference is here the sorted part is empty.</p>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">A Simulation</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="619" height="544" src="./../wp-content/uploads/2022/01/selection-sort.png" alt="" class="wp-image-114" srcset="./../wp-content/uploads/2022/01/selection-sort.png 619w, ./../wp-content/uploads/2022/01/selection-sort-300x264.png 300w" sizes="(max-width: 619px) 100vw, 619px" /><figcaption>Selection sort</figcaption></figure>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Algorithm</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>To sort a array using selection sort( LIST[],N)</p>
+
+
+
+<ol type="1"><li>For I:=1 to N</li></ol>
+
+
+
+<p>MIN:=I</p>
+
+
+
+<p>&nbsp;For J:=I+1 to N</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If LIST[J]&lt;LIST[MIN] then</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MIN:=J</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [end of if]</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [end of for]</p>
+
+
+
+<p>If INDEXMIN !=I&nbsp; then</p>
+
+
+
+<p>&nbsp;&nbsp; Swap&nbsp; LIST[MIN] and LIST[I]</p>
+
+
+
+<p>[end of if]</p>
+
+
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [end of for]</p>
+
+
+
+<p>End of program.</p>
+
+
+
+<div style="height:30px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Complexity</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Best case complexity : Ω(n^2)</li><li>Average case complexity: θ(n^2)</li><li>Worst case complexity: O(n^2)</li></ul>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Advantages and Disadvantages</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ol type="1"><li>It works well in small number of elements. But the efficiency affects when it is used in a huge number of elements.</li><li>It doesn’t need any additional memory spaces.</li><li>Quick sort is much more efficient than selection sort.</li></ol>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/selection-sort/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Insertion sort</title>
+		<link>./../2022/01/04/insertion-sort/index.html</link>
+					<comments>./../2022/01/04/insertion-sort/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 10:16:50 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[Sorting]]></category>
+		<guid isPermaLink="false">./../index.html?p=107</guid>
+
+					<description><![CDATA[What is Insertion sort? Insertion sort is a kind of simple sorting algorithm that creates a final arranged or sorted list taking one item at a time. Example Consider you have 5 cards out of a deck of cards in your hand . And they are sorted in the ascending order of their number. If...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">What is Insertion sort?</h3>
+
+
+
+<div style="height:17px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Insertion sort is a kind of simple sorting algorithm that creates a final arranged or sorted list taking one item at a time.</p>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Example</h3>
+
+
+
+<p>Consider you have 5 cards out of a deck of cards in your hand . And they are sorted in the ascending order of their number. If I give you one card and ask you to&nbsp; insert the card in your hand what will you do? You will find the lower or the higher number of the card and insert it. This is called insertion sort.</p>
+
+
+
+<div style="height:21px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="540" height="193" src="./../wp-content/uploads/2022/01/insertion.png" alt="" class="wp-image-108" srcset="./../wp-content/uploads/2022/01/insertion.png 540w, ./../wp-content/uploads/2022/01/insertion-300x107.png 300w" sizes="(max-width: 540px) 100vw, 540px" /></figure>
+
+
+
+<div style="height:19px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Algorithm</h3>
+
+
+
+<div style="height:20px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<pre class="wp-block-code"><code>Iterate from I:=1 to I&lt;=N
+i. X:=NUM&#91;I]
+
+J:=I-1
+ii. while J&gt;=1 and NUM&#91;J]&gt;X
+NUM&#91;J+1]:=NUM&#91;J]
+J:=J-1
+&#91;end of while loop]
+
+iii. NUM&#91;J+1]:=X
+&#91;end of for loop ]
+</code></pre>
+
+
+
+<div style="height:29px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Sample Code</h3>
+
+
+
+<div style="height:15px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<pre class="wp-block-code"><code>for(i=0;i&lt;=n;i++)
+{
+  x=num&#91;i];
+j=i-1;
+while(j&gt;=1&amp;num&#91;j]&gt;x)
+{
+  num&#91;j+1]=num&#91;j];
+j--;
+}
+num&#91;j+1]=x;}
+</code></pre>
+
+
+
+<div style="height:29px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Complexity</h3>
+
+
+
+<div style="height:19px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Worst case complexity :O(n^2)</li><li>Best case complexity: O(n)</li><li>Average case complexity: O(n^2)</li></ul>
+
+
+
+<div style="height:28px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Advantages and Disadvantages</h3>
+
+
+
+<div style="height:17px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ol type="1"><li>It is efficient for smaller data sets but very inefficient for larger lists.</li><li>Insertion sort is adaptive , that means it reduces its total number of steps if a partially sorted array&nbsp; &nbsp;is provided as input.</li><li>It is better than selection sort, bubble sort algorithm.</li><li>Its space time complexity is less, like bubble sort insertion sort also requires single additional memory space.</li><li>It is a stable sorting technique.</li></ol>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/insertion-sort/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Bubble Sort</title>
+		<link>./../2022/01/04/bubble-sort/index.html</link>
+					<comments>./../2022/01/04/bubble-sort/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:56:36 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[Sorting]]></category>
+		<guid isPermaLink="false">./../index.html?p=104</guid>
+
+					<description><![CDATA[What is Bubble sort? Bubble sort is a sorting algorithm that repeatedly swaps the adjacent elements&#160; until it finds its right place. It starts comparing one by one from 1 to n-1 times. It &#160;compares all the element one by one and sort them based on their values. Example If you make &#160;some bubbles in...]]></description>
+										<content:encoded><![CDATA[
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">What is Bubble sort?</h3>
+
+
+
+<div style="height:12px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>Bubble sort is a sorting algorithm that repeatedly swaps the adjacent elements&nbsp; until it finds its right place. It starts comparing one by one from 1 to n-1 times. It &nbsp;compares all the element one by one and sort them based on their values.</p>
+
+
+
+<div style="height:27px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Example</h3>
+
+
+
+<div style="height:18px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p>If you make &nbsp;some bubbles in bottom of water of different sizes at a same time, the bubbles will touch the surface according to their size in descending&nbsp;order. This is an example of bubble sort.</p>
+
+
+
+<div style="height:31px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">A simulation</h3>
+
+
+
+<div style="height:13px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<figure class="wp-block-image size-full"><img loading="lazy" width="584" height="396" src="./../wp-content/uploads/2022/01/bubble-sort.png" alt="" class="wp-image-105" srcset="./../wp-content/uploads/2022/01/bubble-sort.png 584w, ./../wp-content/uploads/2022/01/bubble-sort-300x203.png 300w" sizes="(max-width: 584px) 100vw, 584px" /></figure>
+
+
+
+<div style="height:32px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Algorithm</h3>
+
+
+
+<div style="height:19px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<pre class="wp-block-code"><code>start BubbleSort(arr)
+
+  for all elements of arr
+  if arr&#91;i] &gt; arr&#91;i+1]
+         swap(arr&#91;i], arr&#91;i+1])
+      end if
+   end for
+   return arr
+end BubbleSort
+</code></pre>
+
+
+
+<div style="height:31px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Complexity</h3>
+
+
+
+<div style="height:17px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ul><li>Best case complexity: O ( n )</li><li>Average case complexity: O ( n^2 )</li><li>Worst case complexity: O ( n^2 )</li></ul>
+
+
+
+<div style="height:16px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<h3 class="has-white-color has-vivid-red-background-color has-text-color has-background">Advantages and disadvantages</h3>
+
+
+
+<div style="height:18px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<ol type="1"><li>This sorting method is popular and can be implemented easily.</li><li>It swaps elements without using any other additional memory. So the space requirement is minimum.</li><li>But this is not very efficient with a huge set of data.</li></ol>
+
+
+
+<div style="height:100px" aria-hidden="true" class="wp-block-spacer"></div>
+
+
+
+<p></p>
+]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/bubble-sort/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Vector</title>
+		<link>./../2022/01/04/vector/index.html</link>
+					<comments>./../2022/01/04/vector/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:34:04 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../index.html?p=92</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/vector/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>Map</title>
+		<link>./../2022/01/04/map/index.html</link>
+					<comments>./../2022/01/04/map/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:33:31 +0000</pubDate>
+				<category><![CDATA[Uncategorized]]></category>
+		<guid isPermaLink="false">./../index.html?p=89</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/map/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+		<item>
+		<title>List</title>
+		<link>./../2022/01/04/list/index.html</link>
+					<comments>./../2022/01/04/list/index.html#respond</comments>
+		
+		<dc:creator><![CDATA[mdrahat]]></dc:creator>
+		<pubDate>Tue, 04 Jan 2022 09:33:20 +0000</pubDate>
+				<category><![CDATA[Data structure]]></category>
+		<category><![CDATA[STL]]></category>
+		<guid isPermaLink="false">./../index.html?p=88</guid>
+
+					<description><![CDATA[]]></description>
+										<content:encoded><![CDATA[]]></content:encoded>
+					
+					<wfw:commentRss>./../2022/01/04/list/feed/index.html</wfw:commentRss>
+			<slash:comments>0</slash:comments>
+		
+		
+			</item>
+	</channel>
+</rss>
